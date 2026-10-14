@@ -1,0 +1,30 @@
+[project]
+name = "ai-engineering-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "RudraMoharana", email = "rudra.madhab31@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "psutil>=7.2.2",
+    "torch>=2.14.1",
+    "transformers>=5.19.0",
+]
+
+[project.scripts]
+ai-engineering-lab = "ai_engineering_lab:main"
+
+[build-system]
+requires = ["uv_build>=0.12.4,<0.13.0"]
+build-backend = "uv_build"
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cpu"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "jupyter>=1.1.1",
+]
